@@ -1,0 +1,20 @@
+### Crear una Especialidad
+POST http://localhost:8080/api/especialidades
+Content-Type: application/json
+
+{
+    "nombre": "Cardiología"
+}
+
+### Crear un Médico
+POST http://localhost:8080/api/medicos
+Content-Type: application/json
+
+{
+    "nombre": "Dr. Juan Pérez",
+    "especialidad": "Cardiología",
+    "cedula": "12345"
+}
+
+### Ver resultados
+GET http://localhost:8080/api/medicos

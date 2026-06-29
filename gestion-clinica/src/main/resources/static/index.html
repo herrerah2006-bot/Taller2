@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión Clínica</title>
+</head>
+
+<body>
+    <h1>Gestión Clínica</h1>
+    <button onclick="listar()">Cargar Datos</button>
+    <pre id="resultado"></pre>
+    <script>
+        async function listar() {
+            const res = await fetch('/api/medicos'); 
+            const data = await res.json();
+            document.getElementById('resultado').innerText = JSON.stringify(data, null, 2);
+        }
+    </script>
+</body>
+
+</html>
